@@ -1,0 +1,42 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/cwsfa/robot_ws/build/urdf_robot",
+        "/home/cwsfa/robot_ws/install/urdf_robot/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/sbg_driver/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/ros2_study",
+        "/home/cwsfa/robot_ws/install/ros2_study/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/install/hector_gazebo_plugins/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/growth_restore",
+        "/home/cwsfa/robot_ws/install/growth_restore/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/growth_meter_application/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/install/exploration_bot_gui/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/exploration_bot_application",
+        "/home/cwsfa/robot_ws/install/exploration_bot_application/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/exploration_bot/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/basic_service",
+        "/home/cwsfa/robot_ws/install/basic_service/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/cwsfa/robot_ws/build/urdf_robot",
+        "/home/cwsfa/robot_ws/install/urdf_robot/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/sbg_driver/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/ros2_study",
+        "/home/cwsfa/robot_ws/install/ros2_study/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/install/hector_gazebo_plugins/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/growth_restore",
+        "/home/cwsfa/robot_ws/install/growth_restore/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/growth_meter_application/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/install/exploration_bot_gui/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/exploration_bot_application",
+        "/home/cwsfa/robot_ws/install/exploration_bot_application/lib/python3.10/site-packages",
+        "/home/cwsfa/robot_ws/install/exploration_bot/local/lib/python3.10/dist-packages",
+        "/home/cwsfa/robot_ws/build/basic_service",
+        "/home/cwsfa/robot_ws/install/basic_service/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
