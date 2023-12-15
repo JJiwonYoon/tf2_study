@@ -19,9 +19,9 @@
 
     <link name="laser">
         <visual>
-          <origin xyz="0 0 0" rpy="0 0 0" />
+          <origin xyz="0 0 0" rpy="1.5708 0 0" />
           <geometry>
-            <mesh filename="file://$(find exploration_bot_description)/meshes/antenna.dae"/>
+            <mesh filename="file://$(find exploration_bot_description)/meshes/lidar.dae"/>
           </geometry>
         </visual>
     </link>
