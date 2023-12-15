@@ -13,17 +13,16 @@
     <!-- BODY LINK -->
     <joint name="body_joint" type="fixed">
         <parent link="world"/>
-        <child link="body"/>
-        <origin xyz="-0.12 0 0"/>
+        <child link="laser"/>
+        <origin xyz="10 0 0"/>
     </joint>
 
-    <link name="body">
+    <link name="laser">
         <visual>
-            <origin xyz="0.1 0 0.03"/>
-            <geometry>
-                <box size="0.2 0.1 0.06"/>
-            </geometry>
-            <material name="white"/>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="file://$(find exploration_bot_description)/meshes/antenna.dae"/>
+          </geometry>
         </visual>
     </link>
 
