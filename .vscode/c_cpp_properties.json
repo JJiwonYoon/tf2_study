@@ -21,7 +21,7 @@
         "/home/cwsfa/robot_ws/src/realsense-ros/realsense2_camera/include/**",
         "/home/cwsfa/robot_ws/src/rplidar_ros/include/**",
         "/home/cwsfa/robot_ws/src/sbg_ros2_driver/include/**",
-        "/home/cwsfa/robot_ws/src/tf2_study/include/**",
+        "/home/cwsfa/robot_ws/src/tf2_urdf/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",
