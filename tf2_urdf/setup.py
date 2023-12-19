@@ -10,6 +10,10 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch',[
+            'launch/robot.launch.py',]),
+        ('share/' + package_name + '/urdf',[
+            'urdf/robot.xacro',]),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,6 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'fake_driver = ' + package_name + '.fake_driver:main',
         ],
     },
 )
