@@ -5,7 +5,10 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 
 from geometry_msgs.msg import Twist, TwistStamped
-from sensor_msgs.msg import JointState
+from sensor_msgs.msg import JointState, Image
+
+import cv2
+from cv_bridge import CvBridge
 
 
 class FakeDriver(Node):
@@ -18,6 +21,8 @@ class FakeDriver(Node):
         self.sub_cmd_vel = self.create_subscription(Twist, "cmd_vel", self.cmd_vel_callback, 10)
         # vel raw publisher
         self.pub_vel_raw = self.create_publisher(TwistStamped, "vel_raw", 10)
+        # img raw publisher
+        self.pub_img_raw = self.create_publisher(Image, "img_raw", 10)
 
         # init variable
         self.joint_states = JointState()
@@ -26,6 +31,8 @@ class FakeDriver(Node):
         self.joint_states.position = [0.0, 0.0]
 
         self.vel_raw = TwistStamped()
+
+        self.bridge = CvBridge()
 
         # timer
         self.timer = self.create_timer(0.1, self.publish_callback)
@@ -43,9 +50,14 @@ class FakeDriver(Node):
         # vel raw
         self.vel_raw.header.stamp = curr_time.to_msg()
 
+        # image
+        image = cv2.imread('src/tf2_study/tf2_urdf/image/photo.png', cv2.IMREAD_COLOR)
+        img_raw = self.bridge.cv2_to_imgmsg(image)
+
         # publish
         self.pub_joint_states.publish(self.joint_states)
         self.pub_vel_raw.publish(self.vel_raw)
+        self.pub_img_raw.publish(img_raw)
 
         # simulate wheel rotate
         self.joint_states.position[0] += 0.05
