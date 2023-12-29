@@ -14,6 +14,8 @@ setup(
             'launch/robot.launch.py',]),
         ('share/' + package_name + '/urdf',[
             'urdf/robot.xacro',]),
+        ('share/' + package_name + '/meshes',[
+            'meshes/rplidar.dae',]),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

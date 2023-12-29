@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="urdf_tutorial">
 
+    <property name="pi" value="3.141592653589793"/>
+
     <!-- COLOR -->
     <material name="white">
         <color rgba="1 1 1 1" />
@@ -28,6 +30,21 @@
         <child link="body"/>
         <origin xyz="-0.12 0 0"/>
     </joint>
+
+    <joint name="base_link_to_laser" type="fixed">
+        <parent link="base_link"/>
+        <child link="laser"/>
+        <origin xyz="0 0 0.09" rpy="0 0 -${pi}"/>
+    </joint>
+
+    <link name="laser">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh filename="file://$(find tf2_urdf)/meshes/rplidar.dae"/>
+            </geometry>
+        </visual>
+    </link>
 
     <link name="body">
         <visual>
