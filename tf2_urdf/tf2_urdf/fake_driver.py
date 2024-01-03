@@ -22,7 +22,7 @@ class FakeDriver(Node):
         # vel raw publisher
         self.pub_vel_raw = self.create_publisher(TwistStamped, "vel_raw", 10)
         # img raw publisher
-        self.pub_img_raw = self.create_publisher(Image, "img_raw", 10)
+        # self.pub_img_raw = self.create_publisher(Image, "img_raw", 10)
 
         # init variable
         self.joint_states = JointState()
@@ -51,13 +51,13 @@ class FakeDriver(Node):
         self.vel_raw.header.stamp = curr_time.to_msg()
 
         # image
-        image = cv2.imread('src/tf2_study/tf2_urdf/image/photo.png', cv2.IMREAD_COLOR)
-        img_raw = self.bridge.cv2_to_imgmsg(image)
+        # image = cv2.imread('src/tf2_study/tf2_urdf/image/photo.png', cv2.IMREAD_COLOR)
+        # img_raw = self.bridge.cv2_to_imgmsg(image)
 
         # publish
         self.pub_joint_states.publish(self.joint_states)
         self.pub_vel_raw.publish(self.vel_raw)
-        self.pub_img_raw.publish(img_raw)
+        # self.pub_img_raw.publish(img_raw)
 
         # simulate wheel rotate
         self.joint_states.position[0] += 0.05
