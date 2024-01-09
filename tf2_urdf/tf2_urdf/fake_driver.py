@@ -60,8 +60,8 @@ class FakeDriver(Node):
         # self.pub_img_raw.publish(img_raw)
 
         # simulate wheel rotate
-        self.joint_states.position[0] += 0.05
-        self.joint_states.position[1] += 0.05
+        self.joint_states.position[0] += 0.1
+        self.joint_states.position[1] += 0.1
 
 
 def main(args=None):
